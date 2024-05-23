@@ -1,0 +1,124 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.personal-account {
+  padding: 20px;
+
+  .order_history {
+    padding: 20px;
+    width: 65%;
+    margin-top: 16px;
+  }
+  p {
+    &:first-child {
+      font-weight: bold;
+      font-size: 24px;
+      color: #c14e77; // Цвет текста #c14e77 для слова Профиль
+    }
+  }
+
+  &__inner {
+    display: flex;
+    gap: 12px;
+  }
+
+  .profile {
+    padding: 20px;
+    border: 1px solid #f7f0eb;
+    border-radius: 10px;
+    background-color: #f7f0eb;
+    width: 32%;
+
+    .profile__inner {
+      p {
+        &:first-child {
+          font-weight: bold;
+          font-size: 24px;
+          color: #c14e77; // Цвет текста #c14e77 для слова Профиль
+        }
+      }
+    }
+
+    hr {
+      width: 100%;
+      border: none;
+      height: 1px;
+      background-color: #ccc; // Цвет линии, можно изменить на нужный
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #999;
+      margin: 0;
+    }
+
+    .phone-number {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffc107;
+      margin-bottom: 10px;
+    }
+
+    .address {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        color: #999;
+      }
+
+      a {
+        color: #ffc107;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+
+    .logout {
+      background-color: #f7f0eb;
+      color: #c14e77;
+    }
+  }
+
+  .order_history {
+    p {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      th, td {
+        border: 1px solid #c14e77;
+        padding: 10px;
+        text-align: left;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    
+    .personal-account__inner {
+      flex-direction: column ;
+    }
+
+    .profile {
+      width: 100%;
+      margin-bottom: 20px; // Отступ снизу для разделения профиля и истории заказов
+    }
+
+    .order_history {
+      width: 100%;
+    }
+  }
+}
